@@ -1,20 +1,8 @@
 <?php
-
-use Illuminate\Support\Facades\Route;
-
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-  Route::resource('user', 'UserController');
-
-  Route::apiResource('user', 'UserController');
-
-// Route::get('/user', 'UserController@index');
-// Route::get('/user/create','UserController@create');
-// Route::post('/user','UserController@store');
-// Route::delete('/user/{user}','UserController@destory');
-// Route::GET('/user/{user}','UserController@show');
-//  Route::GET('/user/{user}/edit','UserController@edit');
-//  Route::PATCH ('/user/{user}','UserController@update');
+ Route::get('/','MidController@index');
+ Route::get('index_page','MidController@index_page');
+ Route::get('add_page','MidController@add_page');
+ Route::delete('delete/{id}','MidController@destroy') ;
+ Route::post('store','MidController@store');
+ Route::post('edit/{id}', 'MidController@edit');
+ Route::patch('update/{id}', 'MidController@update');
